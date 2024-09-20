@@ -1,15 +1,9 @@
 import './css/App.scss';
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+//import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
-
-const NavBar = () => (
-  <nav>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-    </ul>
-  </nav>
-);
+import NavBar from './components/NavBar';
 
 const Footer = () => (
   <footer>
@@ -23,6 +17,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/wow" element={<div>wow</div>}/>
       </Routes>
       <Footer />
     </div>

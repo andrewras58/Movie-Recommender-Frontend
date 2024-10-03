@@ -27,3 +27,9 @@ $nav-height: 3.25rem;
   align-items: center;
   flex-direction: column;
 }
+
+@media (max-width: 480px){
+  .content-container{
+    flex-direction: column;
+  }
+}

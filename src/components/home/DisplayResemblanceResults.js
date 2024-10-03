@@ -4,7 +4,7 @@ function DisplayResemblanceResults({movies}) {
   return (
     <ul>
       {movies.map((film, index) => (
-        <li key={index}>{film.title}</li>
+        <li key={index}><a href={`https://www.imdb.com/title/${film.imdb_id}/`} target="_blank" rel="noreferrer">{film.title}</a></li>
       ))}
     </ul>
   )

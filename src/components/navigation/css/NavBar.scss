@@ -9,9 +9,10 @@ nav {
   height: $nav-height;
   z-index: 1;
   width: 100%;
+  z-index: 999;
   .nav-header {
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 0.5rem 0 0 1rem;
     font-weight: bold;
     text-decoration: none;
     color: black;
@@ -25,7 +26,7 @@ nav {
     right: 0.75rem;
     width: 2.25rem;
     height: 2rem;
-    background-color: white;
+    background-color: lightgray;
     cursor: pointer;
     span {
       height: 0.4rem;
@@ -36,6 +37,7 @@ nav {
   }
   ul {
     display: flex;
+    background-color: lightgray;
     li {
       list-style: none;
       a {

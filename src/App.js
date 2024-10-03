@@ -1,15 +1,10 @@
-import './css/App.scss';
+import './App.scss';
 import React from 'react';
-//import { Routes, Route, Link } from 'react-router-dom';
 import { Routes, Route} from 'react-router-dom';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
-
-const Footer = () => (
-  <footer>
-    <span>Footer Content</span>
-  </footer>
-);
+import Home from './components/home/Home';
+import NavBar from './components/navigation/NavBar';
+import Footer from './components/navigation/Footer';
+import Changelog from './components/changelog/Changelog';
 
 function App() {
   return (
@@ -17,7 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/wow" element={<div>wow</div>}/>
+        <Route path="/changelog" element={<Changelog />}/>
       </Routes>
       <Footer />
     </div>

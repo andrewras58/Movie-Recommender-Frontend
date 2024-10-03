@@ -1,9 +1,12 @@
+$nav-height: 3.25rem;
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: lightgray;
   position: fixed;
+  height: $nav-height;
   z-index: 1;
   width: 100%;
   .nav-header {
@@ -22,6 +25,7 @@ nav {
     right: 0.75rem;
     width: 2.25rem;
     height: 2rem;
+    background-color: white;
     cursor: pointer;
     span {
       height: 0.4rem;
@@ -39,12 +43,12 @@ nav {
         text-decoration: none;
         color: black;
         padding: 0.5rem;
-        margin: 0 0.5rem;
+        margin-right: 0.5rem;
         border-radius: 0.5rem;
         font-size: 1.25rem;
       }
       a:hover {
-        background-color: lightgray;
+        background-color: darkgray;
       }
     }
   }

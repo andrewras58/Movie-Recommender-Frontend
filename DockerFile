@@ -7,8 +7,15 @@ WORKDIR /app
 # Copying all the tools and dependencies in the package.json file to the working directory `app`
 COPY package.json .
 
-#Installing all the tools and dependencies in the container
+# Installing all the tools and dependencies in the container
 RUN npm install
+
+# Environment variables
+ARG REACT_APP_title_search_endpoint
+ENV REACT_APP_title_search_endpoint=${REACT_APP_title_search_endpoint}
+
+ARG REACT_APP_resemblance_search_endpoint
+ENV REACT_APP_resemblance_search_endpoint=${REACT_APP_resemblance_search_endpoint}
 
 #Copying all the application source code and files to the working directory `app`
 COPY . .

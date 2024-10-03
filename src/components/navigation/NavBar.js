@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../css/NavBar.scss";
+import "./css/NavBar.scss";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,10 @@ function NavBar() {
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <Link to="/wow">wow</Link>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/changelog">Changelog</Link>
         </li>
       </ul>
     </nav>

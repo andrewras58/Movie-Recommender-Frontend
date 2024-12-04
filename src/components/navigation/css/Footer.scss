@@ -1,3 +1,10 @@
+.focus-bigger {
+  transition: transform 0.2s;
+}
+.focus-bigger:hover {
+  transform: scale(1.15);
+}
+
 footer{
   display: flex;
   justify-content: center;
@@ -5,4 +12,24 @@ footer{
   background-color: black;
   color: white;
   padding-top: 0.5rem;
+  flex-direction: column;
+  .social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .socials {
+      a {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0 0.25rem;
+        display: inline-block;
+        img,
+        svg {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
 }

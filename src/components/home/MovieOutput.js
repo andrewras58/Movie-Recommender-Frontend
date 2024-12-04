@@ -18,11 +18,10 @@ function MovieOutput({movieID}) {
       };
       fetchData();
     }
-  }, [movieID])
+  }, [movieID]) 
 
   return (
     <div className='movie-output'>
-      <span>MovieOutput</span>
       {movieData && <DisplayResemblanceResults movies={movieData}/>}
     </div>
   )

@@ -14,7 +14,7 @@ function TitleSearch({setMovieID}) {
   const validationSchema = Yup.object().shape({
     title: Yup.string()
       .max(100)
-      .required()
+      .required('')
   });
   async function onSubmit(data){
     try{

@@ -4,9 +4,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import DisplayMovieByTitle from './DisplayMovieByTitle';
+import SearchIcon from '@mui/icons-material/Search';
 
 function TitleSearch({setMovieID}) {
-  const [titleResults, setTitleResults] = useState(null);
+  const [titleResults, setTitleResults] = useState([]);
 
   const initialValues = {
     title: ""
@@ -18,8 +19,11 @@ function TitleSearch({setMovieID}) {
   });
   async function onSubmit(data){
     try{
-      const response = await axios.get(`${process.env.REACT_APP_title_search_endpoint}?title=${data['title']}`)
+      let title_endpoint = "http://127.0.0.1:8000/api/search-by-title";
+      const response = await axios.get(`${title_endpoint}?title=${data['title']}`)
       setTitleResults(response.data);
+      document.getElementById('titleResults').style.display = 'flex';
+      setMovieID(null);
     } catch (error) {
       alert("There was an error fetching the data!", error);
     }
@@ -36,8 +40,7 @@ function TitleSearch({setMovieID}) {
         >
           <Form className="form-container">
             <div className="field-container">
-              <label htmlFor="inputTitle">Title</label>
-              <Field autoComplete="off" id="inputTitle" name="title" />
+              <Field autoComplete="off" id="inputTitle" name="title" placeholder="Search for a movie"/>
               <ErrorMessage 
                 id="title-error"
                 name="title"
@@ -45,7 +48,7 @@ function TitleSearch({setMovieID}) {
                 style={{ color: "red", position: "absolute" }}
               />
             </div>
-            <button type="submit">Search</button>
+            <button type="submit"><SearchIcon /></button>
           </Form>
         </Formik>
       </div>

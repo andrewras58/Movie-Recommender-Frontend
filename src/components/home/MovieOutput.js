@@ -10,7 +10,8 @@ function MovieOutput({movieID}) {
     if (movieID){
       const fetchData = async () => {
         try{
-          const response = await axios.get(`${process.env.REACT_APP_resemblance_search_endpoint}?movie_id=${movieID}`);
+          let resemblance_endpoint = "http://127.0.0.1:8000/api/resemblance-results";
+          const response = await axios.get(`${resemblance_endpoint}?movie_id=${movieID}`);
           setMovieData(response.data);
         } catch (error) {
           alert("There was an error fetching the movie data!", error);
@@ -22,7 +23,7 @@ function MovieOutput({movieID}) {
 
   return (
     <div className='movie-output'>
-      {movieData && <DisplayResemblanceResults movies={movieData}/>}
+      {movieID && movieData && <DisplayResemblanceResults movies={movieData}/>}
     </div>
   )
 }

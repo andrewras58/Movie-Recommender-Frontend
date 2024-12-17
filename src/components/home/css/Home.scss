@@ -26,8 +26,26 @@ $nav-height: 3.25rem;
     align-items: center;
     .form-container{
       display: flex;
+      .field-container{
+        input{
+          height: 100%;
+          width: 15rem;
+          padding-left: 0.5rem;
+        }
+      }
+      button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+      }
     }
     .results-section{
+      position: absolute;
+      margin-top: 2.5rem;
+      background-color: white;
       ul{
         list-style: none;
         display: flex;
@@ -42,6 +60,7 @@ $nav-height: 3.25rem;
     align-items: center;
     flex-direction: column;
     ul{
+      margin-top: 1.5rem;
       list-style: none;
       display: flex;
       flex-wrap: wrap;

@@ -19,8 +19,7 @@ function TitleSearch({setMovieID}) {
   });
   async function onSubmit(data){
     try{
-      let title_endpoint = "http://127.0.0.1:8000/api/search-by-title";
-      const response = await axios.get(`${title_endpoint}?title=${data['title']}`)
+      const response = await axios.get(`${process.env.REACT_APP_title_search_endpoint}?title=${data['title']}`)
       setTitleResults(response.data);
       document.getElementById('titleResults').style.display = 'flex';
       setMovieID(null);

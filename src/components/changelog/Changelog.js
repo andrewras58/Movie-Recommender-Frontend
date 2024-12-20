@@ -5,17 +5,15 @@ function Changelog() {
   return (
     <div className="changelog">
       <div className="log">
-        <h1>Alpha 2.2!</h1>
-        <span>This is the second major version of the site, second minor update, as of 12/16/24</span>
+        <h1>Alpha 2.3!</h1>
+        <span>This is the second major version of the site, third minor update, as of 12/20/24</span>
         <ul>
-          <li>Tweaked the AI model and database to included movies up to October 2024</li>
-          <li>Movies now display with a poster</li>
-          <li>Improved search bar and results display (they now disappear and reappear when necessary)</li>
+          <li>Tweaked the AI model and database to include movies up to December 2024</li>
+          <li>Movies from the same series are no longer recommended (only direct sequels)</li>
         </ul>
         <span>Things to do immediately:</span>
         <ul>
-          <li>Update the database again, prune movies more effectively</li>
-          <li>Make sure movies from the same collection are not recommended (don't get flooded with Spider-Man)</li>
+          <li>Retool the weights for the AI to get better recommendations</li>
           <li>Make the website mobile friendly</li>
         </ul>
         <span>Things to do in the future?</span>
